@@ -3,6 +3,8 @@ import Marque from "./Marque";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 import { BsCart4 } from "react-icons/bs";
+import {TfiHelpAlt} from 'react-icons/tfi';
+import {VscAccount} from 'react-icons/vsc'
 const NavBar = ({cart}) => {
   return (
     <div className="sticky-top">
@@ -29,21 +31,23 @@ const NavBar = ({cart}) => {
           <nav className=" ">
             <ul className="gap-5 d-flex justify-content-between align-items-center list-unstyled ">
               <li className="">
-                <Link className=" text-decoration-none text-light fs-4 " to="/">
+                <Link className=" text-decoration-none text-light fs-4 d-none d-md-block " to="/">
                   Account
                 </Link>
+                <VscAccount className="text-light  fs-1 mt-1  d-md-none"/>
               </li>
-              <li className="d-none d-lg-block">
-                <Link className="text-decoration-none text-light fs-4" to="/">
+              <li className="">
+                <Link className="text-decoration-none text-light fs-4 d-none d-md-block" to="/">
                   Help
                 </Link>
+                <TfiHelpAlt className=" text-light  fs-1 mt-1  d-md-none"/>
               </li>
               <li>
                 <Link
                   className="text-decoration-none text-light fs-4"
                   to="/Cart"
                 >
-                  <BsCart4 />
+                  <BsCart4 className="fs-2" />
                   ({cart.length})
                 </Link>
               </li>

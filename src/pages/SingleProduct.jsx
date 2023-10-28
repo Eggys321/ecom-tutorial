@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 import Loader from "../utils/Loader";
 import { ToastContainer, toast } from "react-toastify";
 import { useEffect } from "react";
+import '../styles/SingleProduct.css'
 
 
 const SingleProduct = ({cart,handleAddToCart}) => {
@@ -25,12 +26,12 @@ const SingleProduct = ({cart,handleAddToCart}) => {
   
   return (
     <>
-      <div className="container">
+      <div className="container single-product-container">
         <h2>{loading && <Loader/>} </h2>
         <div className="row justify-content-between align-items-center mt-4">
           <div className="col-sm-12 text-center col-md-4">
             <Card style={{ width: "100%" }}>
-              <Card.Img variant="top" src={image} className="img-fluid " />
+              <Card.Img variant="top" src={image} className="img-fluid single-product-card-img  " />
             </Card>
           </div>
 
