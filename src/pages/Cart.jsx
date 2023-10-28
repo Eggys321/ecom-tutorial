@@ -57,7 +57,7 @@ const Cart = ({cart,setCart}) => {
         {cart.map((singleCart)=>{
           const {image,id,title,price,quantity,description} =singleCart
           return(
-            <div key={id} className='row justify-content-between align-items-center my-4 shadow'>
+            <div key={id} className='row justify-content-between align-items-center my-4 shadow p-5'>
               <div className='col-md-5'>
                 <img src={image} alt={title} className='w-75' />
               </div>
