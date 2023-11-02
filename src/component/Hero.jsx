@@ -24,7 +24,7 @@ const Hero = ({cart,setCart,handleAddToCart}) => {
   return (
     <div className="container my-4 hero-container">
       <h2>{loading && <Loader/>} </h2>
-      <div className="row justify-content-bewteen gap-5">
+      <div className="row justify-content-between gap-5">
         <div className="col-sm-12  col-lg-6 shadow-sm">
           {/* <img src={data.image} alt={data.title} className="w-100 hero-img" /> */}
           <Card style={{ width: "100%" }}>

@@ -48,8 +48,10 @@ const Cart = ({cart,setCart}) => {
     <div className='container'>
       <div>
         {cart.length === 0 &&(
-          <div>
-            <h3>No item in the cart</h3>
+          <div className='text-center '>
+            <h3 className='fs-1 fst-italic fw-bolder text-danger'>No item(s) in the cart</h3>
+            <p className='fw-bolder text-success'>keep shopping....</p>
+            <hr />
           </div>
         )}
       </div>
@@ -58,8 +60,8 @@ const Cart = ({cart,setCart}) => {
           const {image,id,title,price,quantity,description} =singleCart
           return(
             <div key={id} className='row justify-content-between align-items-center my-4 shadow p-5'>
-              <div className='col-md-5'>
-                <img src={image} alt={title} className='w-75' />
+              <div className='col-md-5 text-center'>
+                <img src={image} alt={title} className='w-75 ' />
               </div>
               <div className='col-md-6 d-flex flex-column justify-content-between'>
                 <h2 className='text-danger'> {title} </h2>
@@ -97,10 +99,13 @@ const Cart = ({cart,setCart}) => {
           )}
 
           <div>
+
+            {totalPrice === 0 ? '' : <div>
             <h1> Total Price </h1>
             <div>
               <h2>$ {totalPrice} </h2>
             </div>
+            </div> }
           </div>
         </div>
       </main>
