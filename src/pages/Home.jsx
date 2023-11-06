@@ -7,11 +7,7 @@ import LastPage from '../component/LastPage'
 const Home = ({cart,handleAddToCart, setCart}) => {
   useEffect(()=>{
     document.title = 'Home | Page';
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    })
+    
   })
   return (
     <div className='container'>
