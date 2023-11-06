@@ -35,7 +35,7 @@ const Women = ({handleAddToCart}) => {
                     />
                     </Link>
                     <Card.Body>
-                      <Card.Title> {title.slice(0, 25)} </Card.Title>
+                      <Card.Title> {title.slice(0, 21)} </Card.Title>
                       <Card.Text className='fw-bold text-danger'>${price}</Card.Text>
                       <Button onClick={()=>{handleAddToCart(datumWomen);notify()}} variant="primary" className="btn-sm">Add To Cart
                       </Button>
