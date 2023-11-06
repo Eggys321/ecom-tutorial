@@ -1,10 +1,21 @@
-.component-title-electronics{
-    background-color: #94004f;
-    color: white;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 5rem;
-    margin-top: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;}
+.card-container-electronics{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem;
+}
+
+.card-inner-electronics img{
+    height: 150px;
+    margin: auto;
+
+}
+
+@media(max-width:425px){
+
+    .card-container-electronics{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+
+
+}

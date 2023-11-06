@@ -1,0 +1,12 @@
+.component-title{
+    background-color: #94004F;
+    color: white;
+    /* text-align: center; */
+    height: 5rem;
+    margin-top: 5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -16,7 +16,12 @@ const SingleProduct = ({cart,handleAddToCart}) => {
   
   const { title, price, image, description} = data;
   useEffect(()=>{
-    document.title = `product | ${title}`
+    document.title = `product | ${title}`;
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    })
   })
   const notify = () => {
     toast("An item has been added",{

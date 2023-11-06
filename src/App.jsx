@@ -6,6 +6,7 @@ import NavBar from "./layouts/NavBar";
 import SingleProduct from "./pages/SingleProduct";
 import { useState } from "react";
 import { useEffect } from "react";
+import Footer from "./layouts/Footer";
 
 const cartItemsFromLocalStorage = JSON.parse(localStorage.getItem('cart')) || []
 
@@ -51,6 +52,7 @@ function App() {
             }
           />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );
