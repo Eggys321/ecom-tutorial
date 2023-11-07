@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../styles/Electronics.css'
 import useFetch from '../customHook/useFetch';
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import CartContext from '../context/CartContext';
 
 
 
-const Electronics = ({cart,setCart,handleAddToCart}) => {
+const Electronics = () => {
+  const {handleAddToCart} = useContext(CartContext)
   const {data,loading} = useFetch('https://fakestoreapi.com/products/category/electronics')
   const notify = () => {
     toast("An item has been added",{

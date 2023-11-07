@@ -4,17 +4,21 @@ import Electronics from '../component/Electronics'
 import Women from '../component/Women'
 import LastPage from '../component/LastPage'
 
-const Home = ({cart,handleAddToCart, setCart}) => {
+const Home = () => {
   useEffect(()=>{
     document.title = 'Home | Page';
     
   })
   return (
     <div className='container'>
-      <Hero cart={cart} handleAddToCart={handleAddToCart} setCart={setCart}/>
+      <Hero />
+      <Electronics />
+      <Women/>
+      <LastPage/>
+      {/* <Hero cart={cart} handleAddToCart={handleAddToCart} setCart={setCart}/>
       <Electronics cart={cart} handleAddToCart={handleAddToCart} setCart={setCart}/>
       <Women handleAddToCart={handleAddToCart} />
-      <LastPage/>
+      <LastPage/> */}
 
     </div>
   )

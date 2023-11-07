@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import Marque from "./Marque";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 import { BsCart4 } from "react-icons/bs";
 import {TfiHelpAlt} from 'react-icons/tfi';
 import {VscAccount} from 'react-icons/vsc'
-const NavBar = ({cart}) => {
+import CartContext from "../context/CartContext";
+const NavBar = () => {
+
+  const {cart} = useContext(CartContext)
+
   return (
     <div className="sticky-top">
       <Marque />
