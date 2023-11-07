@@ -27,17 +27,17 @@ const Electronics = () => {
           const{id,image,price,title} = datumElectronics
           return(
             <div key={id} className='text-center  card-inner-electronics '>
-              <Card style={{ width: "" }}>
+              <Card style={{ width: "100%" }}>
                     <Link to={`/SingleProduct/${id}`}>
                     
                     <Card.Img
                       variant="top"
                       src={image}
-                      className="w-75 pt-3"
+                      className="w-75 pt-2"
                     />
                     </Link>
                     <Card.Body>
-                      <Card.Title> {title.slice(0, 8)} </Card.Title>
+                      <Card.Title> {title.slice(0, 15)} </Card.Title>
                       <Card.Text className='fw-bold text-danger'>${price}</Card.Text>
                       <Button onClick={()=>{handleAddToCart(datumElectronics);notify()}} variant="primary" className="btn-sm">Add To Cart
                       </Button>

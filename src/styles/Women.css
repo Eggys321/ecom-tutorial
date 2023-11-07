@@ -3,12 +3,13 @@
     align-items: center;
     scroll-snap-type: x mandatory;
     scroll-padding: 24px;
+    padding: 10px;
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-behavior: smooth;
     text-align: center;
     gap: 4rem;
-    background-color: #D9D9D9;
+    background-color: #f9f5f5;
 }
 
 .card-container-data img{
