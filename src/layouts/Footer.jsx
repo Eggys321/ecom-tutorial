@@ -1,9 +1,13 @@
 import React from "react";
 import { dataFooter } from "../../FooterDb";
+import "../styles/Footer.css"
 
 const Footer = () => {
   const copyRightYear = new Date().getFullYear()
   return (
+    <>
+    <div className="footer">
+
     <footer className="mt-5 bg-black text-white">
       <div className="container  d-md-flex justify-content-between align-items-center p-4">
         {dataFooter.map((datumFooter) => {
@@ -25,6 +29,8 @@ const Footer = () => {
         Copyright &copy; {copyRightYear} Eggy.com. All rights resverd
       </p>
     </footer>
+    </div>
+    </>
   );
 };
 
